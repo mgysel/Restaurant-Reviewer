@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Page</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/search-results-style.css">
+        <link rel="stylesheet" href="css/search-results-media.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="full-width">
+        <div class="container-fluid full-width">
+            <div class="row full-width">
+                <nav class="full-width nav my-meetup">
+                    <div class="inputs center-block">
+                        <select id="rating" class="input">
+                            <option class="first-option" value="" selected>Rating</option>
+                            <option value="☆ ☆ ☆ ☆ ☆">☆ ☆ ☆ ☆ ☆</option>
+                            <option value="★ ☆ ☆ ☆ ☆">★ ☆ ☆ ☆ ☆</option>
+                            <option value="★ ★ ☆ ☆ ☆">★ ★ ☆ ☆ ☆</option>
+                            <option value="★ ★ ★ ★ ☆">★ ★ ★ ★ ☆</option>
+                            <option value="★ ★ ★ ★ ★">★ ★ ★ ★ ★</option>
+                        </select>
+                        <select id="price-range" class="input text-center">
+                            <option class="first-option" value="">Price Range</option>
+                            <option value="$">$</option>
+                            <option value="$$">$$</option>
+                            <option value="$$$">$$$</option>
+                            <option value="$$$$">$$$$</option>
+                        </select>
+                        <select id="nhood" class="input text-center">
+                            <option class="first-option" value="">Neighborhood</option>
+                        </select>
+                        <select id="food-type" class="input text-center">
+                            <option class="first-option" value="">Food Type</option>
+                        </select>
+                    </div>
+                </nav>
+            </div>
+            <div class="row full-width main-content">
+                <div class="rest-list"></div>
+                <!-- <div class="dummy-rest"></div> -->
+                <div class="row full-width">
+                    <footer class="footers navbar-fixed-bottom"></footer>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/rests.js"></script>
+    </body>
+</html>
