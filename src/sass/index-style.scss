@@ -1,0 +1,61 @@
+// Omnipotent Styling
+html, body {
+	height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.body-index {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 44% -30px;
+    overflow-x: hidden;
+}
+
+// Search Inputs
+.inputs {
+    display: block;
+    margin-top: 13%;
+}
+
+.first-option {
+    color: #7e7e7e;
+}
+
+select {
+    font-size: 22px;
+    text-align-last: center;
+}
+
+.input option {
+    font-size: 16px;
+}
+
+.search-inputs {
+    width: 350px;
+    height: 55px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+// Search button
+.search-button {
+    display: block;
+    width: 350px;
+    height: 65px;
+    padding-top: 12px;
+    margin: 63px 0;
+    margin-left: calc(50% - 175px);
+    background-color: #60789C;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 25px;
+}
+
+.search-button:hover {
+    background-color: #354357;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}

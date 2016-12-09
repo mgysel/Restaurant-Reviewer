@@ -1,0 +1,21 @@
+// Inputs top margin
+@media (max-width: 650px) {
+    .inputs {
+        margin-top: 130px;
+    }
+}
+
+// Inputs for mobile
+@media (max-width: 440px) {
+    // .title-text {
+    //     font-size: 30px;
+    //     margin-top: 13.5px;
+    // }
+    .input {
+        max-width: 92.5%;
+    }
+    // .map-button {
+    //     max-width: 93%;
+    //     margin-top: 63px;
+    // }
+}

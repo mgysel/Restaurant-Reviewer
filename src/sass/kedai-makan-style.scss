@@ -1,0 +1,260 @@
+// OMNIPOTENT STYLING
+html, body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fafafa;
+	overflow-x: hidden;
+}
+
+.nav, .header, .background-image .footer {
+	border: 1px solid black;
+}
+
+label {
+	font-weight: normal;
+}
+
+
+
+
+
+// NAV BAR AT TOP
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	height: 128px;
+	margin-bottom: 20px;
+    border: 1px solid #000;
+	color: #FFF;
+    background-color: #3C5A85;
+}
+
+// Restaurant name
+#rest-title-name {
+	margin: 3px 0 0 0;
+}
+
+// Restaurant rating
+#rest-title-rating {
+	margin: 0 0 2px 0;
+}
+
+// Restaurant address
+#rest-title-address {
+	margin: 0 0 3px 0;
+}
+
+
+
+
+
+// FOOTER
+.footers {
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 2;
+	margin-top: 38.8%;
+	height: 7%;
+	border: 1px solid #FFF;
+    background: #3C5A85;
+}
+
+
+
+
+
+// RESTAURANT
+// Kedai Makan info - picture, hours
+#KedaiMakan {
+	margin-left: 4%;
+}
+
+// Photo
+.rest-photo {
+	object-fit: cover;
+	display: inline-block;
+	width: 220px;
+	height: 180px;
+	padding: 0;
+	margin-top: -140px;
+	border: 2px solid #666666;
+}
+
+// Hours
+.rest-hours {
+	display: inline-block;
+	width: 50%;
+	margin-left: 10px;
+}
+
+.table-hours {
+	margin-top: 15px;
+}
+
+td {
+	padding: 1px 20px 1px 2px ;
+}
+
+
+
+
+
+// ADD REVIEW SECTION
+// Outer div
+.review-toggle-section {
+	display: block;
+	width: 50%;
+	padding-left: 0px;
+	margin-top: 20px;
+}
+
+// Inner toggle div
+#review-toggle {
+	display: none;
+	width: 300px;
+	margin-top: 0px;
+	margin-left: calc(100% - 150px);
+}
+
+// Input styling
+.input::placeholder {
+	padding-left: 2px;
+}
+
+// Name
+#name-input {
+	margin-bottom: 5px;
+	width: 300px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid rgb(169, 169, 169);
+}
+
+// Add Review Validation
+#name-input-validation {
+	display: none;
+	color: #cc0000;
+}
+
+// Review
+#review-input {
+	width: 300px;
+	height: 60px;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+
+// Star Rating
+#rating {
+	margin-bottom: 5px;
+	width: 300px;
+	height: 35px;
+	border-radius: 5px;
+}
+
+#rating-input-validation {
+	display: none;
+	color: #cc0000;
+}
+
+// Post Review Button
+#post-review {
+	height: 35px;
+	width: 145px;
+	padding-top: 6px;
+	border: 1px solid #d7d7d7;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+#post-review:hover {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+// Cancel Review Button
+#cancel-review {
+	float: right;
+	height: 35px;
+	width: 145px;
+	padding-top: 6px;
+	margin-left: 8px;
+	border: 1px solid #d7d7d7;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+#cancel-review:hover {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+// Add review button
+#add-review {
+	display: flex;
+	flex-wrap: wrap;
+	width: 250px;
+	height: 35px;
+	padding: 5px 0 12px 78px;
+	margin-bottom: 0px;
+	margin-left: calc(100% - 125px);
+	border: 1px solid #d7d7d7;
+	border-radius: 10px;
+	background-color: #fff;
+	color: #000;
+	font-size: 15px;
+}
+
+#add-review:hover {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+
+
+
+
+// REVIEW SECTION
+// Outer div
+.list-reviews {
+	margin: 17px 4% 0px 4%;
+}
+
+// Outer list
+.comment-list {
+	padding: 0;
+	margin: 0 0 70px 0;
+}
+
+// Individual comment
+.comment {
+	list-style-type: none;
+}
+
+// Div of name, time, and review
+.comment-info {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 15px 15px 5px 15px;
+	margin-bottom: 10px;
+	border: 1px solid #d7d7d7;
+	background-color: #fff;
+}
+
+// Time
+.comment-time {
+	padding-left: 0;
+}
+
+// Date
+.comment-date {
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: bold;
+}
