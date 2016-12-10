@@ -66,7 +66,7 @@ label {
 // RESTAURANT
 // Kedai Makan info - picture, hours
 #KedaiMakan {
-	margin-left: 4%;
+	margin-left: 6%;
 }
 
 // Photo
@@ -119,6 +119,7 @@ td {
 // Input styling
 .input::placeholder {
 	padding-left: 2px;
+	color: #000;
 }
 
 // Name
@@ -161,7 +162,6 @@ td {
 #post-review {
 	height: 35px;
 	width: 145px;
-	padding-top: 6px;
 	border: 1px solid #d7d7d7;
 	border-radius: 10px;
 	background-color: #fff;
@@ -179,7 +179,6 @@ td {
 	float: right;
 	height: 35px;
 	width: 145px;
-	padding-top: 6px;
 	margin-left: 8px;
 	border: 1px solid #d7d7d7;
 	border-radius: 10px;
@@ -201,7 +200,7 @@ td {
 	height: 35px;
 	padding: 5px 0 12px 78px;
 	margin-bottom: 0px;
-	margin-left: calc(100% - 125px);
+	margin-left: calc(100% - 110px);
 	border: 1px solid #d7d7d7;
 	border-radius: 10px;
 	background-color: #fff;

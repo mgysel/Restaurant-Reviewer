@@ -137,23 +137,79 @@ var displayRests = function() {
 // Rating, Price Range, Neighborhood, Food Type
 var filterRests = function() {
 // Function that Sorts Restaraunts based on filters.
+	// number of restaurants
+	var numRests = rests.length;
 	// When changing the rest filter name.
 	$("#rating").change(function() {
 		// Rating value variable
 		var ratingVal = $("#rating").val();
-		// number of restaurants
-		var numRests = rests.length;
 		// Loop through each rest
 		for (var i=0; i<numRests; i++) {
 			var thisRest = rests[i];
 			var thisId = "#" + thisRest.name.replace(/\s/g, '');
-			// Check if the selected rating matches the rest
+			// Check if the selected rating matches the restaurant
 			// If clicked on Top Choice, display all and return
-			if (ratingVal === "") {
+			if (ratingVal === "Rating") {
 				$(thisId).show();
 			} else if (thisRest.rating !== ratingVal) {
 				$(thisId).hide();
 			} else {
+				$(thisId).show();
+			}
+		}
+	});
+	$("#price-range").change(function() {
+		// Rating value variable
+		var priceVal = $("#price-range").val();
+		// Loop through each rest
+		for (var i=0; i<numRests; i++) {
+			var thisRest = rests[i];
+			var thisId = "#" + thisRest.name.replace(/\s/g, '');
+			// Check if the selected price matches the restaurant
+			// If clicked on Top Choice, display all and return
+			if (priceVal === "Price Range") {
+				$(thisId).show();
+			} else if (thisRest.price !== priceVal) {
+				$(thisId).hide();
+			} else {
+				$(thisId).show();
+			}
+		}
+	});
+	$("#nhood").change(function() {
+		// Rating value variable
+		var nhoodVal = $("#nhood").val();
+		console.log(nhoodVal);
+		// Loop through each rest
+		for (var i=0; i<numRests; i++) {
+			var thisRest = rests[i];
+			var thisId = "#" + thisRest.name.replace(/\s/g, '');
+			// Check if the selected neighborhood matches the restaurant
+			// If clicked on Top Choice, display all and return
+			if (nhoodVal === "Neighborhood") {
+				$(thisId).show();
+			} else if (thisRest.hood !== nhoodVal) {
+				$(thisId).hide();
+			} else {
+				$(thisId).show();
+			}
+		}
+	});
+	$("#food-type").change(function() {
+		// Rating value variable
+		var foodTypeVal = $("#food-type").val();
+		// Loop through each rest
+		for (var i=0; i<numRests; i++) {
+			var thisRest = rests[i];
+			var thisId = "#" + thisRest.name.replace(/\s/g, '');
+			// Check if the selected food type matches the restaurant
+			// If clicked on Top Choice, display all and return
+			if ($.inArray(foodTypeVal, thisRest.type)) {
+				$(thisId).hide();
+			} else {
+				$(thisId).show();
+			}
+			if (foodTypeVal === "Food Type") {
 				$(thisId).show();
 			}
 		}

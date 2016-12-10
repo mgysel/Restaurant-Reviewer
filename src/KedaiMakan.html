@@ -5,23 +5,20 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home Page</title>
-        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/kedai-makan-style.css">
-        <link rel="stylesheet" href="css/kedai-makan-media.css">
+        <link rel="stylesheet" href="css/kedai-makan.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
 
     <body class="full-width">
-        <div class="container-fluid full-width">
-            <div class="row full-width">
-                <nav class="col-xs-12 nav" id="KedaiMakanNav">
+        <main class="container-fluid full-width">
+            <header class="row full-width">
+                <header class="col-xs-12 nav" id="KedaiMakanNav">
                     <h1 class="col-xs-12 text-center" id="rest-title-name">Kedai Makan</h1>
                     <span class="col-xs-12 text-center" id="rest-title-rating"> ★ ★ ★ ★ ☆</span>
                     <span class="address col-xs-12 text-center" id="rest-title-address">1802 Bellevue Ave<br> Seattle, WA 98122</span>
-                </nav>
-            </div>
-            <div class="row full-width" id="KedaiMakan">
+                </header>
+            </header>
+            <section class="row full-width" id="KedaiMakan">
                 <img src="img/KedaiMakan.jpg" alt="Kedai Makan Food" class="rest-photo">
                 <div class="rest-hours">
                     <table class="table-hours">
@@ -55,10 +52,10 @@
                         </tr>
                     </table>
                 </div>
-            </div>
-            <div class="row full-width review-toggle-section">
-                <p id="add-review" class="text-center">Add a Review</p>
-                <div id="review-toggle">
+            </section>
+            <section class="row full-width review-toggle-section">
+                <button id="add-review" class="text-center" tabindex="0">Add a Review</button>
+                <aside id="review-toggle">
                     <label for="name-input" id="label-name-input">
                         <input id="name-input" class="input" type="text" placeholder="Name">
                         <p id="name-input-validation" class="validation">*Required field.</p>
@@ -75,11 +72,11 @@
                     <label for="review-input" id="review">
                         <textarea class="input" id="review-input" rows="2" name="review" placeholder="Write your review here."></textarea>
                     </label><br>
-                    <p id="cancel-review" class="text-center">Cancel</p>
-                    <p id="post-review" class="text-center">Post Review</p>
-                </div>
-            </div>
-            <div class="row full-width list-reviews">
+                    <button id="post-review" class="text-center" tabindex="0">Post Review</button>
+                    <button id="cancel-review" class="text-center" tabindex="0">Cancel</button>
+                </aside>
+            </section>
+            <section class="row full-width list-reviews">
                 <ul class="comment-list">
                     <li class="comment">
                         <div class="col-md-12 comment-date">
@@ -113,11 +110,8 @@
                 <div class="row full-width">
                     <footer class="footers navbar-fixed-bottom"></footer>
                 </div>
-            </div>
-        </div>
-        <script src="js/jquery.js"></script>
+            </section>
+        </main>
         <script src="js/add-review.js"></script>
-<!--         // <script src="js/kedaiMakan.js"></script> -->
-        <!-- <script src="js/rests.js"></script> -->
     </body>
 </html>

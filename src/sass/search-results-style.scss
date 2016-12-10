@@ -3,6 +3,7 @@ html, body {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #fafafa;
+	margin-bottom: 245px;
 }
 
 .nav, .header, .background-image .footer {
@@ -13,8 +14,12 @@ label {
 	font-weight: normal;
 }
 
+
+
+
+
 // NAV BAR
-// nav section
+// Nav section
 .nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -22,24 +27,43 @@ label {
 	color: #FFF;
     background-color: #3C5A85;
 }
-// each input
+
+#rating {
+	margin-left: 4.5%;
+}
+
+.inputs {
+	width: 100%;
+}
+
+// Each input
 .input {
 	vertical-align: middle;
 	text-align-last: center;
+	height: 40px;
 	width: 22%;
+	margin-left: 6px;
+	margin-top: 28px;
     border-radius: 6px;
     font-size: 20px;
     color: #000;
 }
-// each option of each input
+
+// Each option of each input
 option {
     padding-left: 20px;
     font-size: 16px;
 }
-// first option in each input
+
+// First option in each input
 .first-option {
     vertical-align: middle;
 }
+
+
+
+
+
 
 // FOOTER
 .footers {
@@ -52,15 +76,22 @@ option {
 	margin-top: 38.8%;
 }
 
+
+
+
+
 // MAIN CONTENT
-// entire section div
+// Entire section div
 .main-content {
-	// margin-top: 5px;
 	margin: 0 4%;
-	// margin-right: 4%;
 }
 
-// rest photo
+// Each restaurant
+.ind-rest {
+	margin-top: 30px;
+}
+
+// Restaurant photo
 .rest-photo {
 	width: 220px;
 	height: 180px;
@@ -69,22 +100,24 @@ option {
 	border: 2px solid #666666;
 }
 
-// .rest-info {
-// 	padding: 15px 15px 5px 15px;
-// 	margin-bottom: 10px;
-// 	background-color: #fff;
-// 	border: 1px solid #d7d7d7;
-// 	display: flex;
-// 	flex-wrap: wrap;
-// }
+// Restaurant info
+.rest-info {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 15px 15px 5px 15px;
+	margin-bottom: 10px;
+	border: 1px solid #d7d7d7;
+	background-color: #fff;
+	font-weight: bold;
+}
 
-// .rest-info {
-// 	font-weight: bold;
-// 	// display: flex;
-// 	// flex-wrap: wrap;
-// }
+// Each piece of restaurant input
+.rest-input {
+	margin-bottom: 6px;
+	padding: 0px;
+}
 
-// .rest-input {
-// 	margin-bottom: 6px;
-// 	padding: 0px;
-// }
+// Restaurant info
+.rest-span {
+	width: 100%;
+}

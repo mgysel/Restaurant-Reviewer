@@ -2,6 +2,7 @@
 html, body {
 	height: 100%;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .body-index {
@@ -9,7 +10,6 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 44% -30px;
-    overflow-x: hidden;
 }
 
 // Search Inputs
