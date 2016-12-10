@@ -6,6 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var mergeStream = require('merge-stream');
 
@@ -26,21 +27,25 @@ gulp.task('dist', [
 	'sass',
 	'css',
 	'lint',
-	'scripts-dist'
+	'scripts'
 ]);
 
 gulp.task('scripts', function() {
-	gulp.src(['src/js/jquery.js', 'src/js/add-review.js','src/js/gtfs.js','src/js/app.js'])
-		// .pipe(concat('all.js'))
+	gulp.src(['src/js/jquery.js', 'src/js/add-review.js'])
+		.pipe(concat('add-review.js'))
+		.pipe(uglify('add-review.js'))
+		.pipe(gulp.dest('dist/js'));
+	gulp.src(['src/js/jquery.js', 'src/js/rests.js'])
+		.pipe(concat('rests.js'))
+		.pipe(uglify('rests.js'))
 		.pipe(gulp.dest('dist/js'));
 });
 
-// copy over index, images, data, and serviceworker.
+// copy over html files, images.
 gulp.task('copy', function() {
 	return mergeStream(
     	gulp.src('src/*.html').pipe(gulp.dest('dist')),
-    	gulp.src('src/img/*').pipe(gulp.dest('dist/img')),
-    	gulp.src('src/js/*').pipe(gulp.dest('dist/js'))
+    	gulp.src('src/img/*').pipe(gulp.dest('dist/img'))
   	);
 });
 
@@ -56,12 +61,23 @@ gulp.task('sass', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('css', function() {
-	gulp.src('src/css/**/*.css')
-		// .pipe(concat('style.css'))
+// Concat and minify css
+gulp.task('css', function () {
+	gulp.src(['src/css/bootstrap.css', 'src/css/index-style.css', 'src/css/index-media.css'])
 		.pipe(cleanCSS())
-		.pipe(gulp.dest('dist/css'))
-		.pipe(browserSync.stream());
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		.pipe(concat('index.css'))
+		.pipe(gulp.dest('dist/css'));
+	gulp.src(['src/css/bootstrap.css', 'src/css/kedai-makan-style.css', 'src/css/kedai-makan-media.css'])
+		.pipe(cleanCSS())
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		.pipe(concat('kedai-makan.css'))
+		.pipe(gulp.dest('dist/css'));
+	gulp.src(['src/css/bootstrap.css', 'src/css/search-results-style.css', 'src/css/search-results-media.css'])
+		.pipe(cleanCSS())
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		.pipe(concat('search-results.css'))
+		.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('lint', function () {
